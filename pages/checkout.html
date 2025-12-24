@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Datos de contacto – Cotización de servicios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" href="../assets/logo/logo-ico.png" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="../js/checkout.js" defer></script>
+    <script src="../js/constantes/constantes.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="../index.html" class="logo">
+          <img
+            src="../assets/logo/logo-diego-chiang.png"
+            alt="Logo Diego Chiang"
+          />
+          <span class="logo-text"
+            >Servicios de Data, Analytics y Automatización</span
+          >
+        </a>
+
+        <nav class="main-nav">
+          <a href="../index.html" class="nav-link">Inicio</a>
+          <a href="carrito.html" class="nav-link nav-cart"> Cotización </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="checkout">
+        <div class="container checkout-grid">
+          <div class="checkout-resumen">
+            <h1>Resumen de tu cotización</h1>
+            <p>Estos son los servicios que seleccionaste.</p>
+
+            <div class="tabla-wrapper">
+              <table class="tabla">
+                <thead>
+                  <tr>
+                    <th>Servicio</th>
+                    <th>Categoría</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Horas</th>
+                  </tr>
+                </thead>
+                <tbody id="resumen-items"></tbody>
+              </table>
+            </div>
+
+            <ul class="resumen-lista resumen-lista--checkout">
+              <li>
+                <span>Total de servicios:</span>
+                <strong id="resumen-total-servicios">0</strong>
+              </li>
+              <li>
+                <span>Total de horas estimadas:</span>
+                <strong id="resumen-total-horas">0 h</strong>
+              </li>
+              <li>
+                <span>Costo estimado:</span>
+                <strong id="resumen-total-costo">USD 0.00</strong>
+              </li>
+            </ul>
+            <button
+              type="button"
+              id="btn-vaciar-checkout"
+              class="btn btn-secondary btn-full"
+            >
+              Vaciar cotización
+            </button>
+          </div>
+
+          <div class="checkout-form-wrapper">
+            <h2>Tus datos de contacto</h2>
+            <p>
+              Completa tus datos para que pueda enviarte una propuesta basada en
+              esta cotización.
+            </p>
+
+            <form id="form-checkout" class="form">
+              <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  autocomplete="name"
+                />
+                <small id="error-nombre" class="error-msg" hidden></small>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                />
+                <small id="error-email" class="error-msg" hidden></small>
+              </div>
+
+              <div class="form-group">
+                <label for="empresa">Empresa o proyecto</label>
+                <input type="text" id="empresa" name="empresa" />
+                <small id="error-empresa" class="error-msg" hidden></small>
+              </div>
+
+              <div class="form-group">
+                <label for="sector">Sector</label>
+                <select id="sector" name="sector">
+                  <option value="">Selecciona una opción</option>
+                  <option value="Energía">Energía</option>
+                  <option value="Salud">Salud</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Construcción">Construcción</option>
+                  <option value="Educación">Educación</option>
+                  <option value="Servicios">Servicios</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje">Comentarios adicionales (opcional)</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                Enviar solicitud
+              </button>
+
+              <a href="carrito.html" class="btn btn-secondary btn-full">
+                Volver a la cotización
+              </a>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>
+          &copy; <span id="year">2025</span> Diego Chiang. Servicios de Data,
+          Analytics y Automatización.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

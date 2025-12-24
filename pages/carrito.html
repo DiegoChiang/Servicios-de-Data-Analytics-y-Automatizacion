@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cotización de servicios – Diego Chiang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" href="../assets/logo/logo-ico.png" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="../js/constantes/constantes.js"></script>
+    <script src="../js/carrito.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="../index.html" class="logo">
+          <img
+            src="../assets/logo/logo-diego-chiang.png"
+            alt="Logo Diego Chiang"
+          />
+          <span class="logo-text"
+            >Servicios de Data, Analytics y Automatización</span
+          >
+        </a>
+
+        <nav class="main-nav">
+          <a href="../index.html" class="nav-link">Inicio</a>
+          <a href="carrito.html" class="nav-link nav-link-active nav-cart">
+            Cotización
+            <span class="cart-pill">
+              <span id="cart-count">0</span>
+            </span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="carrito">
+        <div class="container">
+          <header class="carrito-header">
+            <div>
+              <h1>Tu cotización de servicios</h1>
+              <p>
+                Revisa los servicios seleccionados y ajusta tu cotización antes
+                de continuar.
+              </p>
+            </div>
+            <a href="../index.html" class="btn btn-secondary">
+              Seguir explorando servicios
+            </a>
+          </header>
+
+          <div class="carrito-contenido">
+            <div class="tabla-wrapper">
+              <table class="tabla">
+                <thead>
+                  <tr>
+                    <th>Servicio</th>
+                    <th>Categoría</th>
+                    <th>Herramienta</th>
+                    <th>Nivel</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Horas</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="lista-cotizacion"></tbody>
+              </table>
+
+              <p id="mensaje-vacio" class="mensaje-vacio">
+                Tu cotización está vacía. Agrega servicios desde el catálogo.
+              </p>
+            </div>
+
+            <aside class="carrito-resumen">
+              <h2>Resumen</h2>
+              <ul class="resumen-lista">
+                <li>
+                  <span>Total de servicios:</span>
+                  <strong id="total-servicios">0</strong>
+                </li>
+                <li>
+                  <span>Total de horas estimadas:</span>
+                  <strong id="total-horas">0 h</strong>
+                </li>
+                <li>
+                  <span>Costo estimado:</span>
+                  <strong id="total-costo">USD 0.00</strong>
+                </li>
+              </ul>
+
+              <button
+                type="button"
+                id="btn-vaciar"
+                class="btn btn-secondary btn-full"
+              >
+                Vaciar cotización
+              </button>
+
+              <a
+                href="checkout.html"
+                id="btn-continuar-carrito"
+                class="btn btn-primary btn-full"
+              >
+                Continuar con mis datos
+              </a>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>
+          &copy; 2025 Diego Chiang. Servicios de Data, Analytics y
+          Automatización.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

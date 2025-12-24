@@ -1,0 +1,1 @@
+const MONEDA = "USD";

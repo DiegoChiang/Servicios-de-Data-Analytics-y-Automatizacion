@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Solicitud enviada – Servicios de Data, Analytics y Automatización
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" href="../assets/logo/logo-ico.png" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="../js/exito.js" defer></script>
+    <script src="../js/constantes/constantes.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="../index.html" class="logo">
+          <img
+            src="../assets/logo/logo-diego-chiang.png"
+            alt="Logo Diego Chiang"
+          />
+          <span class="logo-text"
+            >Servicios de Data, Analytics y Automatización</span
+          >
+        </a>
+
+        <nav class="main-nav">
+          <a href="../index.html" class="nav-link">Inicio</a>
+          <a href="carrito.html" class="nav-link nav-cart"> Cotización </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="exito">
+        <div class="container exito-content">
+          <header class="exito-header">
+            <h1>¡Solicitud enviada!</h1>
+            <p>
+              Gracias, <strong id="ok-nombre-cliente">cliente</strong>. Te
+              contactaré en <strong id="ok-email-cliente">tu correo</strong> con
+              una propuesta basada en tu cotización.
+            </p>
+          </header>
+
+          <div class="exito-body">
+            <div class="exito-resumen">
+              <h2>Resumen de la cotización</h2>
+
+              <div class="tabla-wrapper">
+                <table class="tabla">
+                  <thead>
+                    <tr>
+                      <th>Servicio</th>
+                      <th>Categoría</th>
+                      <th>Subtotal</th>
+                      <th>Horas</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ok-items"></tbody>
+                </table>
+              </div>
+
+              <ul class="resumen-lista resumen-lista--exito">
+                <li>
+                  <span>Total de servicios:</span>
+                  <strong id="ok-total-servicios">0</strong>
+                </li>
+                <li>
+                  <span>Total de horas estimadas:</span>
+                  <strong id="ok-total-horas">0 h</strong>
+                </li>
+                <li>
+                  <span>Costo estimado:</span>
+                  <strong id="ok-total-costo">USD 0.00</strong>
+                </li>
+              </ul>
+            </div>
+
+            <aside class="exito-actions">
+              <h3>¿Qué puedes hacer ahora?</h3>
+              <ul>
+                <li>Revisar nuevamente el catálogo de servicios.</li>
+                <li>
+                  Ajustar una nueva cotización si tus necesidades cambian.
+                </li>
+              </ul>
+
+              <a href="../index.html" class="btn btn-primary btn-full">
+                Volver al inicio
+              </a>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>
+          &copy; <span id="year">2025</span> Diego Chiang. Servicios de Data,
+          Analytics y Automatización.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
